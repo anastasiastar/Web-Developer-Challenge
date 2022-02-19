@@ -11,8 +11,9 @@ First, we can sort by the title of the book:Alphabetic and unalphabetical. We ca
 publish year, publication and language and see if a certain value contains a key. This is useful if you're
 searching for a specific common titled book with a certain author. You can also hide the title tab if that 
 is irrelevant to your search. 
-4. Some of the considerations to make the website responsible and mobile friendly is 
-
+4. Some of the considerations to make the website responsible and mobile friendly is creating the mobile aspect first. 
+I wrapped the column and row and adjusted the width of the column  based on screen rized and utilized the bootstrap
+built in functions
 5. Some ways I can make my app accessible for people with disabilities such as blindness and color blindness, I 
 can provide sufficient contrast using colors and textures as well as using descriptive labels for links and
 buttons. I would also implement easy keyboard accessibility.
