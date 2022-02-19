@@ -6,24 +6,24 @@ export default class SearchForm extends Component{
 
     constructor(props){
         super(props);
-        this.state = {results:""}
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
+        this.props.loadingStatus(true)
+        this.props.updateSearch(event.target.elements.book.value)
         const apiBase = "http://openlibrary.org/search.json?q=" + event.target.elements.book.value
-    
+        
         axios.get(apiBase).then(res =>{
             this.props.onEnteredSearch(res.data.docs)
-            this.setState({book:res.data.docs})
-        }
-        )
+        })
+        
       }
 
     render(){
         return (
             <Alert variant="dark" >
-                <Alert.Heading>Search For a Book By its Title</Alert.Heading>
+                <Alert.Heading>Search For a Book By its Title</Alert.Heading>              
             <Container >
                 <Form onSubmit={this.handleSubmit}>
                  <Row>
